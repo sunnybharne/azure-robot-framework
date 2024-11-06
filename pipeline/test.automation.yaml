@@ -1,0 +1,17 @@
+name: acr-test-automation-pipeline
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  name: 'selfhostedvm'
+
+stages:
+- stage:
+  jobs:
+  - job: Test-Automation
+    steps:
+    - bash: |
+            echo "Hello, from test automation"
+
